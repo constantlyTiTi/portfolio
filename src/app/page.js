@@ -1,113 +1,157 @@
-import Image from "next/image";
+// 'use client'
+import { Typography, Container, Card, List, ListItemText, ListItem, CardContent, Link, CardActions, AppBar } from '@mui/material';
+import Grid from '@mui/material/Unstable_Grid2';
+import AppShortcutOutlinedIcon from '@mui/icons-material/AppShortcutOutlined';
+import LaptopOutlinedIcon from '@mui/icons-material/LaptopOutlined';
+import Image from 'next/image'
 
 export default function Home() {
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
+
+    <main className="flex min-h-screen flex-col items-center justify-between p-2">
+      <AppBar position="static" sx={{ bgcolor: "Black"}}>
+        <Container maxWidth="xl" sx={{display: { sm: 'block', md: "flex"}}}>
+          <Typography
+            variant="h6"
+            noWrap
+            component="div"
+            sx={{ display: { sm: 'block', md: "flex" }, p:2 }}
+          >Email:
+            <a href="mailto:mycentryting@gmail.com">mycentryting@gmail.com</a>
+          </Typography>
+          <Typography
+            variant="h6"
+            noWrap
+            component="div"
+            sx={{ display: { sm: 'block', md: "flex" }, p:2 }}
+          ><a href='../../public/Resume_TingLi.docx' download>Download resume</a>
+          </Typography>
+        </Container>
+      </AppBar>
+      <Grid container spacing={2} md={8} xs={12}>
+        <Grid item xs={12} md={6} lg={8}>
+          <Typography variant="h2" component="div">
+            Ting Li
+          </Typography>
+
+          <Typography variant="h5" component="div" color="text.secondary" sx={{ mt: 4 }}>
+            a Software developer with robust background in full stack development
+          </Typography>
+
+          <Typography variant="h6" component="div" color="text.secondary" sx={{ mt: 4 }}>
+            Hello, I am a software developer. I have cultivated extensive skills in database management, DevOps practices, website development, android application, and agil development methodologies.
+          </Typography>
+
+          <Typography variant="h6" component="div" color="text.secondary" sx={{ mt: 3 }}>
+            Skills:
+            <List sx={{ px: 2 }}>
+              <ListItem disablePadding>
+                <ListItemText primary="Spring boot, Java, Kotlin" /></ListItem>
+              <ListItem disablePadding>
+                <ListItemText primary="Kubernetes, Splunk, Dynatrace" /></ListItem>
+              <ListItem disablePadding>
+                <ListItemText primary="Kafka, Websocket, AWS" /></ListItem>
+              <ListItem disablePadding>
+                <ListItemText primary="React.js, NextJs" /></ListItem>
+              <ListItem disablePadding>
+                <ListItemText primary="ASP.Net, C#" /></ListItem>
+              <ListItem disablePadding>
+                <ListItemText primary="MySql, SQL, non-SQL" /></ListItem>
+            </List>
+          </Typography>
+        </Grid>
+        <Grid item xs={12} md={6} lg={4} sx={{ mt: 3 }}>
+          <div style={{ height: '100%',width:'100%', position: 'relative' }}>
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+              src="/developer-Img.jpg"
+              layout='fill'
+              alt="Picture of the author"
             />
-          </a>
-        </div>
-      </div>
+          </div>
+        </Grid>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      </Grid>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <Grid container spacing={5} xs={12} md={8}>
+        <Grid item xs={12} md={4}>
+          <Card>
+            <CardContent>
+              <LaptopOutlinedIcon />
+              <Typography variant="h5" component="div">
+                Java Developer
+              </Typography>
+              <Typography variant="h7" color="text.secondary">
+                Developed tools with Spring boot and React with MySql database to improve the rollout process, using of Maven and Docker to faciliate efficient project building and running.
+                Used Git as my version control systems, and investigated bugs by using Splunk, Dynatrace, and Kubernetes.
+              </Typography>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item md={4} xs={12}>
+          <Card>
+            <CardContent>
+              <AppShortcutOutlinedIcon />
+              <Typography variant="h5" component="div">
+                Software Developer
+              </Typography>
+              <Typography variant="h7" color="text.secondary">
+                Developed Adnroid Chat application in Kotlin, showcasing my expertise in AWS Amplify, AWS Coginito, and real-time features using AWS Kinesis WebRTC.
+              </Typography>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item md={4} xs={12}>
+          <Card>
+            <CardContent>
+              <LaptopOutlinedIcon />
+              <Typography variant="h5" component="div">
+                Full Stack Developer
+              </Typography>
+              <Typography variant="h7" color="text.secondary">
+                Developed patient booking appointment system by ASP.NET.Built UI functions by jQuery and Ajax such as creating or updating information without refreshing page and shifting partial views.
+                Used Selenium to implement automation test suite that builds test scripts for patient portal, staff portal, dashboard, and critical projects
+              </Typography>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+            </CardContent>
+          </Card>
+        </Grid>
+
+      </Grid>
+
+      <Grid container spacing={5} xs={12} md={8}>
+        <Grid item xs={12} md={4}>
+          <Card style={{ width: '100%', position: 'relative' }}>
+            <CardContent>
+              <Typography variant="h5" component="div">
+                Stock Watch
+              </Typography>
+              <Typography variant="h6" component="text.secondary">
+                Latest personal project
+              </Typography>
+              <Typography variant="h7" color="text.secondary">
+                <List>
+                  <ListItem disablePadding>
+                    <ListItemText primary="- Spring Boot + Apache Kafka" />
+                  </ListItem>
+                  <ListItem disablePadding>
+                    <ListItemText primary="- Setup enovironment with Docker" />
+                  </ListItem>
+                  <ListItem disablePadding>
+                    <ListItemText primary="- Next.js + React.js + Node.js + WebSocket" />
+                  </ListItem>
+                </List>
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Link size="small" href="https://github.com/constantlyTiTi/StockWatch">Learn More</Link>
+            </CardActions>
+          </Card>
+        </Grid>
+      </Grid>
+
     </main>
   );
 }
