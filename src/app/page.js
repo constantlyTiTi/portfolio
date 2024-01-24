@@ -97,7 +97,7 @@ export default function Home() {
                 Software Developer
               </Typography>
               <Typography variant="h7" color="text.secondary">
-                Developed Adnroid Chat application in Kotlin, showcasing my expertise in AWS Amplify, AWS Coginito, and real-time features using AWS Kinesis WebRTC.
+                Developed Android Chat application in Kotlin, showcasing my expertise in AWS Amplify, AWS Coginito, and real-time features using AWS Kinesis WebRTC.
               </Typography>
 
             </CardContent>
