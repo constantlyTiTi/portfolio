@@ -17,15 +17,15 @@ export default function Home() {
             noWrap
             component="div"
             sx={{ display: { sm: 'block', md: "flex" }, p:2 }}
-          >Email:
-            <a href="mailto:mycentryting@gmail.com">mycentryting@gmail.com</a>
+          >
+            <Link href="mailto:mycentryting@gmail.com"color="inherit" underline="hover">mycentryting@gmail.com</Link>
           </Typography>
           <Typography
             variant="h6"
             noWrap
             component="div"
             sx={{ display: { sm: 'block', md: "flex" }, p:2 }}
-          ><Link href='Resume_TingLi.docx' download>Download resume</Link>
+          ><Link href='Resume_TingLi.docx' color="inherit" underline="hover" download>Download resume</Link>
           </Typography>
         </Container>
       </AppBar>
