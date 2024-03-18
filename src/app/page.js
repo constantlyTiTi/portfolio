@@ -61,7 +61,7 @@ export default function Home() {
             </List>
           </Typography>
         </Grid>
-        <Grid item xs={12} md={6} lg={4} sx={{ mt: 3 }}>
+        {/* <Grid item xs={12} md={6} lg={4} sx={{ mt: 3 }}>
           <div style={{ height: '100%',width:'100%', position: 'relative' }}>
             <Image
               src="/developer-Img.jpg"
@@ -69,13 +69,13 @@ export default function Home() {
               alt="Picture of the author"
             />
           </div>
-        </Grid>
+        </Grid> */}
 
       </Grid>
 
       <Grid container spacing={5} xs={12} md={8}>
         <Grid item xs={12} md={4}>
-          <Card>
+          <Card sx={{height:'100%'}}>
             <CardContent>
               <LaptopOutlinedIcon />
               <Typography variant="h5" component="div">
@@ -90,7 +90,7 @@ export default function Home() {
           </Card>
         </Grid>
         <Grid item md={4} xs={12}>
-          <Card>
+          <Card sx={{height:'100%'}}>
             <CardContent>
               <AppShortcutOutlinedIcon />
               <Typography variant="h5" component="div">
@@ -104,7 +104,7 @@ export default function Home() {
           </Card>
         </Grid>
         <Grid item md={4} xs={12}>
-          <Card>
+          <Card sx={{height:'100%'}}>
             <CardContent>
               <LaptopOutlinedIcon />
               <Typography variant="h5" component="div">
