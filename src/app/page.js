@@ -25,7 +25,7 @@ export default function Home() {
             noWrap
             component="div"
             sx={{ display: { sm: 'block', md: "flex" }, p:2 }}
-          ><a href='../../public/Resume_TingLi.docx' download>Download resume</a>
+          ><Link href='Resume_TingLi.docx' download>Download resume</Link>
           </Typography>
         </Container>
       </AppBar>
